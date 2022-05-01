@@ -16,7 +16,7 @@ endif
 
 " Theme
 colorscheme darkspace
-" let g:darkspace_italics=1
+let g:darkspace_italics=1
 " let g:enfocado_style="nature"
 " " Make transparent if terminal, black if gui
 if has("gui_running")

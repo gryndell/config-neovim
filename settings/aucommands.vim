@@ -121,7 +121,6 @@ augroup end
 " Save folds etc.
 augroup view_group
   autocmd!
-  autocmd VimEnter * ++nested colorscheme enfocado
   autocmd BufWinLeave *.* silent! mkview!
   autocmd BufWinEnter *.* silent! loadview
   autocmd BufWinLeave config mkview!
@@ -146,11 +145,11 @@ augroup Goyo
   autocmd! user GoyoLeave Limelight!
 augroup END
 
-" Terminal fix for ACP
-augroup Terminal
-  autocmd BufEnter,TermOpen term://* AcpDisable
-  autocmd BufLeave term://* AcpEnable
-augroup END
+" " Terminal fix for ACP
+" augroup Terminal
+"   autocmd BufEnter,TermOpen term://* AcpDisable
+"   autocmd BufLeave term://* AcpEnable
+" augroup END
 
 " Auto Commands }}}
 
