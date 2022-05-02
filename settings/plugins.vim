@@ -8,8 +8,6 @@ filetype plugin indent on
 call plug#begin('~/.local/share/nvim/site/pack')
 
 " Various plugins
-Plug 'vim-scripts/AutoComplPop' " Auto Completion - Lightweight
-" Plug 'shougo/deoplete.nvim' " Auto Completion
 Plug 'tpope/vim-commentary' " Shortcuts for comments
 " Abolish: Example to swap the words "man" and "dog":
 " :%S/{man,dog}/{dog,man}/g
@@ -46,7 +44,7 @@ Plug 'vim-pandoc/vim-pandoc' " Pandoc integration
 Plug 'vim-pandoc/vim-pandoc-syntax' " Pandoc syntax
 Plug 'dhruvasagar/vim-table-mode' " Easy tables
 Plug 'gabrielelana/vim-markdown' " Better Vim Markdown syntax highlighting
-Plug 'neovim/nvim-lspconfig' " LSP Configuration
+Plug 'neoclide/coc.nvim', {'branch': 'release'}     " Completion and LSP
 
 " " Dart/Flutter
 Plug 'dart-lang/dart-vim-plugin'
@@ -74,11 +72,6 @@ Plug 'wuelnerdotexe/vim-enfocado' " enfocado colorscheme
 "Initialize plugin system
 call plug#end()
 
-" Deoplete Settings {{{
-" Enable deoplete at startup
-" let g:deoplete#enable_at_startup = 1
-" Deoplete Settings }}}:w
-
 " Airline Settings {{{
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -89,12 +82,6 @@ let g:airline_left_sep=''
 let g:airline_left_alt_sep=' '
 let g:airline_right_sep=''
 let g:airline_right_alt_sep=' '
-" if !(&term =~ 'xterm-kitty')
-"   let g:airline_left_sep='▓▒░'
-"   let g:airline_left_alt_sep=' '
-"   let g:airline_right_sep='░▒▓'
-"   let g:airline_right_alt_sep=' '
-" endif
 " Airline Settings }}}
 
 " ALE Settings {{{
@@ -198,10 +185,7 @@ let g:tex_flavor = 'latex'
 " lsc
 let g:lsc_auto_map = v:true
 
-" " Ranger
-" source $HOME/.config/nvim/plug-config/rnvimr.vim
-
-" nnn
+" nnn as file picker
 lua << EOF
 require("nnn").setup({
 picker = {

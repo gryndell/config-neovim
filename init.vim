@@ -5,19 +5,10 @@ source $HOME/.config/nvim/settings/functions.vim
 source $HOME/.config/nvim/settings/mappings.vim
 source $HOME/.config/nvim/settings/aucommands.vim
 source $HOME/.config/nvim/settings/abbreviations.vim
+source $HOME/.config/nvim/settings/coc-settings.vim
 source $HOME/.config/nvim/settings/appearance.vim
 " }}} Source configuraton files
-
-" {{{ Lua code
-lua << EOF
-local nvim_lsp = require('lspconfig')
-
--- require 'lspconfig'.pyright.setup{}
-require 'lspconfig'.pylsp.setup{}
-require 'lspconfig'.bashls.setup{}
-require 'lspconfig'.ccls.setup{}
--- require 'lspconfig'.dartls.setup{}
-EOF
-" }}} Lua code
+" Run shell scripts in bash
+set shell=/bin/bash
 
 " vim: foldmethod=marker

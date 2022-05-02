@@ -61,6 +61,7 @@ set list
 set fileformat=unix     " Default to Unix text file format
 set autoread            " Autoload files that have changed outside of vim
 set shortmess+=I        " Don't show intro
+set shortmess+=c        " Don't pass messages to |ins-completion-menu|
 set novisualbell        " Prevent visual beeping at every mistype
 set wildmode=longest,list,full  " Enhanced command line completion
 set wildmenu            " Wild Menu Mode for completion on command line
@@ -74,6 +75,7 @@ set sessionoptions-=options " Session Options
 " was -> '100,<50,s10,h
 set shada='100,f1,:100,/100,<100,s10,!,h
 set belloff=all         " Set bell off
+
 let g:netrw_liststyle=1 " Set file system explorer to use long line listing
 " Check if using gui
 if has("gui_running")
