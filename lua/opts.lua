@@ -7,7 +7,7 @@ opt.colorcolumn = '80'      -- str:  Show col for max line length
 opt.number = true           -- bool: Show line numbers
 opt.relativenumber = true   -- bool: Show relative line numbers
 opt.scrolloff = 4           -- int:  Min num lines of context
-opt.signcolumn = "yes"      -- str:  Show the sign column
+opt.signcolumn = "number"   -- str:  Show the sign column
 --}}} Context
 
 --{{{ Encoding
@@ -20,7 +20,7 @@ opt.syntax = "ON"           -- str:  Allow syntax highlighting
 opt.termguicolors = true    -- bool: If term supports ui color then enable
 opt.pumheight = 10          -- Makes popup menu smaller
 opt.ruler = true            -- Show cursor position always
-opt.cmdheight = 2  
+opt.cmdheight = 2
 opt.iskeyword = opt.iskeyword + '-'     -- Treat '-' as a word break
 opt.conceallevel = 0        -- Initialise conceallevel
 opt.cursorline = true       -- Highlight the current line

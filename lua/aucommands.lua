@@ -1,4 +1,3 @@
--- vim: foldmethod=syntax
 vim.cmd [[
 augroup jump_group
   autocmd!
@@ -149,3 +148,4 @@ augroup END
 " augroup END
 
 ]]
+-- vim: foldmethod=syntax

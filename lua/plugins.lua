@@ -117,7 +117,7 @@ return packer.startup(function(use)
   ---}}} Treesitter
 
   --{{{ Git
-  use "lewis6991/gitsigns.nvim"
+  -- use "lewis6991/gitsigns.nvim"
   --}}} Git
 
   --{{{ Automatically start packer

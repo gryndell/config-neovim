@@ -134,11 +134,6 @@ _G.packer_plugins = {
     path = "/home/ralph/.local/share/nvim/site/pack/packer/start/fzf",
     url = "https://github.com/junegunn/fzf"
   },
-  ["gitsigns.nvim"] = {
-    loaded = true,
-    path = "/home/ralph/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
-    url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/ralph/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
