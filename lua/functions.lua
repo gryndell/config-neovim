@@ -1,7 +1,5 @@
-" ┏━╸╻ ╻┏┓╻┏━╸╺┳╸╻┏━┓┏┓╻┏━┓
-" ┣╸ ┃ ┃┃┗┫┃   ┃ ┃┃ ┃┃┗┫┗━┓
-" ╹  ┗━┛╹ ╹┗━╸ ╹ ╹┗━┛╹ ╹┗━┛
-" Functions {{{
+--[[ functions.lua ]]--
+vim.cmd [[
 " Toggle numbers
 function!ToggleNumber()
   if (&relativenumber == 0 && &number == 0)
@@ -104,7 +102,5 @@ endfunction " Move_Down
 function! AutoCorrect()
     normal! ms[s1z=`s
 endfunction " AutoCorrect
+]]
 
-" Functions }}}
-
-" vim: foldmethod=marker

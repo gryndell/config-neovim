@@ -1,8 +1,5 @@
-" ┏━┓╻ ╻╺┳╸┏━┓   ┏━╸┏━┓┏┳┓┏┳┓┏━┓┏┓╻╺┳┓┏━┓
-" ┣━┫┃ ┃ ┃ ┃ ┃   ┃  ┃ ┃┃┃┃┃┃┃┣━┫┃┗┫ ┃┃┗━┓
-" ╹ ╹┗━┛ ╹ ┗━┛   ┗━╸┗━┛╹ ╹╹ ╹╹ ╹╹ ╹╺┻┛┗━┛
-" Auto Commands {{{
-" jump to last cursor
+-- vim: foldmethod=syntax
+vim.cmd [[
 augroup jump_group
   autocmd!
   autocmd BufReadPost *
@@ -151,6 +148,4 @@ augroup END
 "   autocmd BufLeave term://* AcpEnable
 " augroup END
 
-" Auto Commands }}}
-
-" vim: foldmethod=marker
+]]
