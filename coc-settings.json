@@ -11,6 +11,18 @@
             "rootPatterns": [".c",".cc",".cpp",".h",".hpp"],
             "trace.server": "verbose",
             "filetypes": ["c","cpp"]
+        },
+        "go": {
+            "command": "gopls",
+            "rootPatterns": ["go.mod"],
+            "trace.server": "verbose",
+            "filetypes": ["go"]
+        },
+        "rust": {
+            "command": "rls",
+            "rootPatterns": ["Cargo.toml"],
+            "trace.server": "verbose",
+            "filetypes": ["rust"]
         }
     }
 }

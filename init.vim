@@ -9,6 +9,8 @@ source $HOME/.config/nvim/settings/coc-settings.vim
 source $HOME/.config/nvim/settings/appearance.vim
 " }}} Source configuraton files
 " Run shell scripts in bash
-set shell=/bin/bash
+if &shell =~# 'fish$'
+  set shell=/bin/bash
+endif
 
 " vim: foldmethod=marker

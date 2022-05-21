@@ -37,11 +37,12 @@ Plug 'freitass/todo.txt-vim' " Syntax highlighting for todo.txt files
 Plug 'mbbill/undotree' " Undo tree visualisation
 Plug 'alvan/vim-closetag' " Automatically close tags in html
 " Plug 'mboughaba/i3config.vim' " i3 config syntax
-Plug 'rust-lang/rust.vim' " Configuration for Rust
+" Plug 'rust-lang/rust.vim' " Configuration for Rust
 Plug 'cespare/vim-toml' " Syntax for TOML
 Plug 'tommcdo/vim-lion' " Align text around a character
 Plug 'vim-pandoc/vim-pandoc' " Pandoc integration
 Plug 'vim-pandoc/vim-pandoc-syntax' " Pandoc syntax
+Plug 'khaveesh/vim-fish-syntax' " Syntax highlighting for fish
 Plug 'dhruvasagar/vim-table-mode' " Easy tables
 Plug 'gabrielelana/vim-markdown' " Better Vim Markdown syntax highlighting
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " Completion and LSP
@@ -99,18 +100,20 @@ let g:ale_linters = {
     \ 'c': ['cc'],
     \ 'cpp': ['cc'],
     \ 'dart': ['dart'],
+    \ 'go': ['golint'],
     \ 'javascript': ['eslint'],
     \ 'markdown': ['mdl', 'writegood', 'proselint'],
     \ 'vimwiki': ['mdl', 'writegood', 'proselint'],
     \ 'pandoc': ['mdl', 'writegood', 'proselint'],
     \ 'python': ['flake8'],
     \ 'sh': ['language_server', 'shellcheck'],
-    \ 'rust': ['cargo', 'rls']
+    \ 'rust': ['cargo', 'rls'],
     \ }
 let g:ale_fixers = {
       \ 'c': ['astyle'],
       \ 'cpp': ['astyle'],
       \ 'dart': ['dartfmt'],
+      \ 'go': ['gofmt'],
       \ 'python': ['yapf'],
       \ '*': ['remove_trailing_lines', 'trim_whitespace'],
       \ }
@@ -185,19 +188,19 @@ let g:tex_flavor = 'latex'
 " lsc
 let g:lsc_auto_map = v:true
 
-" nnn as file picker
-lua << EOF
-require("nnn").setup({
-picker = {
-  cmd = "nnn -d",
-  style = {
-    width = 0.5,    -- width in proportion of viewport
-    height = 0.5,   -- height in proportion of viewport
-    border = "rounded"   -- border decoration, e.g., "rounded" (:h nvim_open_win)
-    },
-  },
-  replace_netrw = "picker"
-})
-EOF
+" " nnn as file picker
+" lua << EOF
+" require("nnn").setup({
+" picker = {
+"   cmd = "nnn -d",
+"   style = {
+"     width = 0.5,    -- width in proportion of viewport
+"     height = 0.5,   -- height in proportion of viewport
+"     border = "rounded"   -- border decoration, e.g., "rounded" (:h nvim_open_win)
+"     },
+"   },
+"   replace_netrw = "picker"
+" })
+" EOF
 
 " vim: foldmethod=marker
