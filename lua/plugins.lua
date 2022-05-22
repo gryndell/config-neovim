@@ -81,6 +81,7 @@ return packer.startup(function(use)
   use "joshdick/onedark.vim"        -- OneDark colorscheme
   use "yuqio/vim-darkspace"         -- DarkSpace colorscheme
   use "wuelnerdotexe/vim-enfocado"  -- enfocado colorscheme
+  use "drewtempelmeyer/palenight.vim"   -- palenight
   --}}} Colorschemes
 
   --{{{ Completion
@@ -102,6 +103,7 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim"    -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "simrat39/rust-tools.nvim"        -- extra functionality to rust analyzer
   ---}}} LSP
 
   --{{{ Telescope

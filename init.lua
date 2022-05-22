@@ -13,53 +13,12 @@ require('aucommands')   -- auto commands
 require('autopairs')    -- auto pairing
 require('tabline')      -- BufferLine Tab Line
 require('statusline')   -- Lualine Status Line
+require('lspsetup')     -- LSP setup
 --}}} Imports
 
 --{{{ nvim-tree
 require('nvim-tree').setup{}
 --}}} nvim-tree
-
---{{{ LSP
-vim.cmd [[ highlight DiagnosticSignError guifg=red ]]
-vim.cmd [[ highlight DiagnosticSignWarn guifg=orange ]]
-vim.cmd [[ highlight DiagnosticSignInfo guifg=blue ]]
-vim.cmd [[ highlight DiagnosticSignHInt guifg=green ]]
-vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335]]
-vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
-local border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }
-require('lspconfig').gopls.setup{}
-require('lspconfig').pylsp.setup{}
-require('lspconfig').rls.setup{}
-
-local signs = {
-    Error = '✗',
-    Warn = '⚠',
-    Info = '',
-    Hint = ''
-}
-for type, icon in pairs(signs) do
-    local hl = "DiagnosticSign" .. type
-    vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
-end
-vim.diagnostic.config({
-    virtual_text = false,
-    signs = true,
-    underline = true,
-    update_in_insert = false,
-    severity_sort = false,
-    float = {
-        border = "rounded",
-        format = function(diagnostic)
-            return string.format(
-                "%s (%s) [%s]",
-                diagnostic.message,
-                diagnostic.source,
-                diagnostic.code or diagnostic.user_data.lsp.code
-            )
-        end,
-    }
-})
---}}} LSP
 
 --{{{ Ale
 vim.cmd [[
@@ -83,6 +42,7 @@ vim.cmd [[
             \ 'vimwiki': ['mdl', 'writegood', 'proselint'],
             \ 'pandoc': ['mdl', 'writegood', 'proselint'],
             \ 'python': ['flake8'],
+            \ 'rust': ['cargo', 'rust_analyzer'],
             \ 'sh': ['language_server', 'shellcheck'],
             \ }
     let g:ale_fixers = {
@@ -94,7 +54,7 @@ vim.cmd [[
                 \ '*': ['remove_trailing_lines', 'trim_whitespace'],
                 \ }
 ]]
---}}} Ale
+-- --}}} Ale
 
 --{{{ Markdown
 vim.g.markdown_mdl_executable = 'mdl'

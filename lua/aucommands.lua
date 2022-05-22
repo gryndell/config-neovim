@@ -32,7 +32,7 @@ augroup file_types
   autocmd FileType tex,text,markdown,pandoc
     \ setlocal textwidth=79 wrap shiftwidth=4 tabstop=4 expandtab
   autocmd FileType gitcommit  setlocal spell textwidth=72
-  autocmd FileType sh,zsh,ruby,vim,yaml,html,phtml,xhtml,xml,xsl,css
+  autocmd FileType fish,sh,zsh,ruby,vim,yaml,html,phtml,xhtml,xml,xsl,css
     \ setlocal textwidth=0 wrap shiftwidth=2 tabstop=2 expandtab
   autocmd FileType ruby       setlocal omnifunc=rubycomplete#Complete
   autocmd FileType html,phtml,xhtml,xml,xsl   :CloseTagEnableBuffer
@@ -148,4 +148,3 @@ augroup END
 " augroup END
 
 ]]
--- vim: foldmethod=syntax
