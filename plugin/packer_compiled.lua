@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/home/ralph/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
     url = "https://github.com/lunarvim/darkplus.nvim"
   },
+  fd = {
+    loaded = true,
+    path = "/home/ralph/.local/share/nvim/site/pack/packer/start/fd",
+    url = "https://github.com/sharkdp/fd"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/ralph/.local/share/nvim/site/pack/packer/start/friendly-snippets",

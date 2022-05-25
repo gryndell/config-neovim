@@ -14,6 +14,7 @@ require('autopairs')    -- auto pairing
 require('tabline')      -- BufferLine Tab Line
 require('statusline')   -- Lualine Status Line
 require('lspsetup')     -- LSP setup
+require('tssetup')      -- telescope setup
 --}}} Imports
 
 --{{{ nvim-tree
