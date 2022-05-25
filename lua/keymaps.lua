@@ -97,3 +97,9 @@ keymap('n', '<leader>o', ':setlocal spell!<cr>', opts)
 -- Auto correct last spelling error
 keymap('n', '<leader>ac', ':call AutoCorrect()<cr>', opts)
 
+-- Find files using Telescope command-line sugar.
+keymap('n', '<leader>ff', ':Telescope find_files<cr>', opts)
+keymap('n', '<leader>fg', ':Telescope live_grep<cr>', opts)
+keymap('n', '<leader>fb', ':Telescope buffers<cr>', opts)
+keymap('n', '<leader>fh', ':Telescope help_tags<cr>', opts)
+
