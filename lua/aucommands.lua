@@ -35,7 +35,6 @@ augroup file_types
   autocmd FileType fish,sh,zsh,ruby,vim,yaml,html,phtml,xhtml,xml,xsl,css
     \ setlocal textwidth=0 wrap shiftwidth=2 tabstop=2 expandtab
   autocmd FileType ruby       setlocal omnifunc=rubycomplete#Complete
-  autocmd FileType html,phtml,xhtml,xml,xsl   :CloseTagEnableBuffer
   autocmd FileType calendar   :IndentLinesDisable
   autocmd FileType csv        :IndentLinesDisable
 
