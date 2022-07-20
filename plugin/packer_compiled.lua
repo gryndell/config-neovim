@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/home/ralph/.local/share/nvim/site/pack/packer/start/fzf",
     url = "https://github.com/junegunn/fzf"
   },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/home/ralph/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/ralph/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -214,6 +219,11 @@ _G.packer_plugins = {
     path = "/home/ralph/.local/share/nvim/site/pack/packer/start/onedark.vim",
     url = "https://github.com/joshdick/onedark.vim"
   },
+  ["openscad.nvim"] = {
+    loaded = true,
+    path = "/home/ralph/.local/share/nvim/site/pack/packer/start/openscad.nvim",
+    url = "https://github.com/salkin-mada/openscad.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/ralph/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -252,7 +262,7 @@ _G.packer_plugins = {
   ["vim-darkspace"] = {
     loaded = true,
     path = "/home/ralph/.local/share/nvim/site/pack/packer/start/vim-darkspace",
-    url = "https://github.com/yuqio/vim-darkspace"
+    url = "https://github.com/ts-26a/vim-darkspace"
   },
   ["vim-enfocado"] = {
     loaded = true,

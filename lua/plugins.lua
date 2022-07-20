@@ -74,15 +74,17 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
   use "wincent/loupe"   -- Make Search/Replace Very Magic
+  use "salkin-mada/openscad.nvim"   -- Syntax etc. for OpenSCAD
   --}}} Helpers
 
   --{{{ Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "joshdick/onedark.vim"        -- OneDark colorscheme
-  use "yuqio/vim-darkspace"         -- DarkSpace colorscheme
+  use "ts-26a/vim-darkspace"         -- DarkSpace colorscheme
   use "wuelnerdotexe/vim-enfocado"  -- enfocado colorscheme
   use "drewtempelmeyer/palenight.vim"   -- palenight
+  use "ellisonleao/gruvbox.nvim"        -- gruvbox
   --}}} Colorschemes
 
   --{{{ Completion
