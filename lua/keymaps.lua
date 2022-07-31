@@ -1,6 +1,7 @@
 --[[ keymaps.lua ]]--
 local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
+local expr_opts = { silent = true, expr = true }
 -- Short name for nvim_set_keymap
 local keymap = vim.api.nvim_set_keymap
 

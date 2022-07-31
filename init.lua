@@ -15,6 +15,7 @@ require('tabline')      -- BufferLine Tab Line
 require('statusline')   -- Lualine Status Line
 require('lspsetup')     -- LSP setup
 require('tssetup')      -- telescope setup
+require('luasnip-config')   -- LuaSnip Config
 --}}} Imports
 
 --{{{ nvim-tree
