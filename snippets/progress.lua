@@ -73,9 +73,9 @@ end --}}}
 local defbuf = s(
     "defbuf",
     fmt(
-        [[
+[[
 define buffer b_{1} for {2}.
-        ]],
+]],
     {
         i(1, "tablename"),
         rep(1),
@@ -87,9 +87,9 @@ table.insert(snippets, defbuf)
 local defvar = s(
     "defvar",
     fmt(
-        [[
+[[
 define variable {1} as {2} no-undo.
-        ]],
+]],
     {
         i(1, "varname"),
         c(2, {t("integer"), t("decimal"), t("logical"), t("character")}),
@@ -120,7 +120,7 @@ local fl = s(
     fmt(
         [[
 find last {1} {2} where
-{4}.{3} no-error
+{4}.{3} no-error.
         ]],
     {
         i(1, "buffername"),
@@ -132,7 +132,7 @@ find last {1} {2} where
 )
 table.insert(snippets, fl)
 
-local proc = s(
+local progproc = s(
     "proc",
     fmt(
 [[
@@ -141,23 +141,78 @@ procedure {1}:
     define output parameter {4} as {5} initial {6} no-undo.
     define output parameter {7} as {8} initial {9} no-undo.
 
-end procedure. /* {10} */
+    {10}
+end procedure. /* {11} */
 ]],
     {
         i(1, "procname"),
         i(2, "s_inp_par1"),
-        i(3, "character"),
+        c(3, {t("integer"), t("decimal"), t("logical"), t("character")}),
         i(4, "s_out_par1"),
         i(5, "logical"),
         i(6, "no"),
         i(7, "s_out_par2"),
         i(8, "character"),
         i(9, "''"),
+        i(10, ""),
         rep(1),
     }
     )
 )
-table.insert(snippets, proc)
+table.insert(snippets, progproc)
+
+ local progfunc = s(
+     "func",
+     fmt(
+[[
+/** {1} **/
+function {2} returns {3}
+(
+    {4} as {5}
+):
+    define variable {6} as {7} initial {8} no-undo.
+    {9}
+    return {10}
+end function. /* {11} */
+]],
+     {
+         i(1, "description"),
+         i(2, "func_name"),
+         i(3, "character"),
+         i(4, "f_inp_var"),
+         i(5, "date"),
+         i(6, "f_out_var"),
+         i(7, "character"),
+         i(8, "''"),
+         i(9, ""),
+         rep(6),
+         rep(2),
+     }
+     )
+ )
+ table.insert(snippets, progfunc)
+
+local progon = s(
+    "on",
+    fmt(
+[[
+on {1} of {2} in frame {3} do:
+    {4}
+end. /** {5} of {6} in frame {7} **/
+]],
+    {
+        i(1, "f1, pf1, go 'enter'"),
+        i(2, "fieldname"),
+        i(3, "framename"),
+        i(4, ""),
+        rep(1),
+        rep(2),
+        rep(3),
+    }
+    )
+)
+table.insert(snippets, progon)
+
 -- End Refactoring --
 
 return snippets, autosnippets
