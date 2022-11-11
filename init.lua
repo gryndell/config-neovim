@@ -26,8 +26,8 @@ require('nvim-tree').setup{}
 vim.cmd [[
     let g:ale_sign_error = '✗'
     let g:ale_sign_warning = '⚠'
-    highlight ALEErrorSign guibg=NONE guifg=red
-    highlight ALEWarningSign guibg=NONE guifg=yellow
+    highlight ALEErrorSign guibg=black guifg=red
+    highlight ALEWarningSign guibg=black guifg=yellow
     let g:ale_linters_explicit = 1
     let g:ale_lint_on_text_changed = 'never'
     let g:ale_lint_on_enter = 1
@@ -69,3 +69,9 @@ vim.cmd [[
     let g:table_mode_corner = '|'
 ]]
 --}}} Table Mode
+
+--{{{ Wrap conditions
+vim.cmd [[
+set whichwrap=b,s,h,l,<,>,[,]
+]]
+--}}} Wrap conditions

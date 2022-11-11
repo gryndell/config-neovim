@@ -102,16 +102,16 @@ augroup end
 
 " Highlight words to avoid in tech writing
 " http://css-tricks.com/words-avoid-educational-writing/
-augroup tech_words
-  autocmd!
-  autocmd BufWinEnter *.tex,*.pandoc,*.md highlight TechWordsToAvoid
-  \ guibg=red
-  \ guifg=white
-  autocmd BufWinEnter *.tex,*.pandoc,*.md match TechWordsToAvoid /\cobviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however,\|so,\|easy/
-  autocmd InsertEnter *.tex,*.pandoc,*.md match TechWordsToAvoid /\cobviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however,\|so,\|easy/
-  autocmd InsertLeave *.tex,*.pandoc,*.md match TechWordsToAvoid /\cobviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however,\|so,\|easy/
-  autocmd BufWinLeave * call clearmatches()
-augroup end
+" augroup tech_words
+"   autocmd!
+"   autocmd BufWinEnter *.tex,*.pandoc,*.md highlight TechWordsToAvoid
+"   \ bg=red
+"   \ fg=white
+"   autocmd BufWinEnter *.tex,*.pandoc,*.md match TechWordsToAvoid /\cobviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however,\|so,\|easy/
+"   autocmd InsertEnter *.tex,*.pandoc,*.md match TechWordsToAvoid /\cobviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however,\|so,\|easy/
+"   autocmd InsertLeave *.tex,*.pandoc,*.md match TechWordsToAvoid /\cobviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however,\|so,\|easy/
+"   autocmd BufWinLeave * call clearmatches()
+" augroup end
 
 " Save folds etc.
 augroup view_group
