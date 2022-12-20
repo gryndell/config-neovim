@@ -100,6 +100,36 @@ augroup file_types
   autocmd BufWritePost ~/.Xresources silent! !xrdb %
 augroup end
 
+" autocmd group for progress 4gl
+augroup group_progress
+  autocmd Filetype progress setlocal fdm=indent wrap sw=4 ts=4 tw=79
+  autocmd FileType progress iabbrev ava available
+  autocmd FileType progress iabbrev cha character
+  autocmd FileType progress iabbrev dec decimal
+  autocmd FileType progress iabbrev def define
+  autocmd FileType progress iabbrev fun function
+  autocmd FileType progress iabbrev ini initial
+  autocmd FileType progress iabbrev inp input
+  autocmd FileType progress iabbrev int integer
+  autocmd FileType progress iabbrev log logical
+  autocmd FileType progress iabbrev mes message
+  autocmd FileType progress iabbrev noa no-apply
+  autocmd FileType progress iabbrev noe no-error
+  autocmd FileType progress iabbrev nol no-lock
+  autocmd FileType progress iabbrev nom no-message
+  autocmd FileType progress iabbrev nop no-pause
+  autocmd FileType progress iabbrev nou no-undo
+  autocmd FileType progress iabbrev par parameter
+  autocmd FileType progress iabbrev pro procedure
+  autocmd FileType progress iabbrev rep repeat
+  autocmd FileType progress iabbrev ret return
+  autocmd FileType progress iabbrev var variable
+  autocmd FileType progress
+    \ iabbrev do: do:<cr><bs>end.<space>/**<space><space>**/<esc>3ki
+  autocmd FileType progress
+    \ nnoremap <leader>D V/^end<cr>:s/first/last/<cr>gv:s/gt/lt/<cr>gv:s/down/up/<cr>:nohls<cr>
+augroup end
+
 " Highlight words to avoid in tech writing
 " http://css-tricks.com/words-avoid-educational-writing/
 " augroup tech_words
