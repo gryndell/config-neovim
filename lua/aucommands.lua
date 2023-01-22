@@ -52,6 +52,7 @@ augroup file_types
     \ setlocal wrap linebreak formatoptions=tcqn
   autocmd FileType markdown,nroff,pandoc,tex,text   setlocal formatprg=par\ -w79
   autocmd FileType c,cpp,javascript,lua,rust,sh,vim setlocal cindent
+  autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
 
   " Fold Methods
   autocmd FileType markdown setlocal foldmethod=expr
