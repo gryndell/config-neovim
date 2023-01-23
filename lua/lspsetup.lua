@@ -31,8 +31,9 @@ end
 local servers = {
     'gopls',
     'pylsp',
-    'rls',
-    'sumneko_lua'
+    'rust_analyzer',
+    'sumneko_lua',
+    'tsserver'
 }
 for _, lsp in pairs(servers) do
     require('lspconfig')[lsp].setup{

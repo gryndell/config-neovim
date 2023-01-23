@@ -73,8 +73,8 @@ augroup file_types
   autocmd BufRead,BufNewFile .Xresources
     \ nnoremap <CR><buffer> <leader>c :s/^/! /<cr>
 
-  " Auto indent HTML when reading/writing
-  autocmd BufWritePre,BufRead *.html :normal! m'gg=G`'
+  " Auto indent HTML when writing
+  autocmd BufWritePre *.html :normal! m'gg=G`'
 
   " Settings for specific files
   autocmd BufRead,BufNewFile *.spv setlocal ft=php
