@@ -26,14 +26,27 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
+-- Mason setup
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})
+
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = {
     'gopls',
     'pylsp',
     'rust_analyzer',
-    'sumneko_lua',
-    'tsserver'
+    'lua_ls',
+    'tsserver',
+    'html',
+    'cssls'
 }
 for _, lsp in pairs(servers) do
     require('lspconfig')[lsp].setup{
