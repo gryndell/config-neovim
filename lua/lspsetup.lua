@@ -29,6 +29,7 @@ end
 -- Mason setup
 require("mason").setup({
     ui = {
+        border = "rounded",
         icons = {
             package_installed = "✓",
             package_pending = "➜",
@@ -36,7 +37,10 @@ require("mason").setup({
         }
     }
 })
+require("mason-lspconfig").setup()
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = {
@@ -45,14 +49,18 @@ local servers = {
     'rust_analyzer',
     'lua_ls',
     'tsserver',
-    'html',
-    'cssls'
 }
 for _, lsp in pairs(servers) do
     require('lspconfig')[lsp].setup{
         on_attach = on_attach
     }
 end
+require'lspconfig'.html.setup {
+    capabilities = capabilities,
+}
+require'lspconfig'.cssls.setup {
+    capabilities = capabilities,
+}
 
 vim.cmd [[ autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false }) ]]
 vim.cmd [[ highlight DiagnosticSignError guifg=red ]]

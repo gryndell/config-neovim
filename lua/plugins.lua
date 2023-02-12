@@ -102,8 +102,9 @@ return packer.startup(function(use)
   --}}} Snippets
 
   --{{{ LSP
+  use "williamboman/mason.nvim"         -- language server and linter installer
+  use "williamboman/mason-lspconfig.nvim"   -- Bridge between mason.nvim and nvim-lspconfig
   use "neovim/nvim-lspconfig"           -- enable LSP
-  use "williamboman/mason.nvim"         -- languag server and linter installer
   use "tamago324/nlsp-settings.nvim"    -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "simrat39/rust-tools.nvim"        -- extra functionality to rust analyzer
