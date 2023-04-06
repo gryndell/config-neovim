@@ -126,6 +126,10 @@ return packer.startup(function(use)
   -- use "lewis6991/gitsigns.nvim"
   --}}} Git
 
+  --{{{ codeium AI completion
+  use "Exafunction/codeium.vim"
+  --}}} codeium
+
   --{{{ Automatically start packer
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
