@@ -97,6 +97,10 @@ augroup file_types
   " Check file in shellcheck
   autocmd FileType sh nnoremap <silent> <leader>s :!clear && shellcheck %<cr>
 
+  " Unmap <tab> for markdown/pandoc
+  autocmd FileType markdown silent! iunmap <buffer> <tab>
+  autocmd FileType pandoc silent! iunmap <buffer> <tab>
+
   " Run xrdb whenever .Xresources is updated
   autocmd BufWritePost ~/.Xresources silent! !xrdb %
 augroup end
