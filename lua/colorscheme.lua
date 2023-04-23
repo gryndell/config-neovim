@@ -3,4 +3,5 @@ vim.cmd [[
   colorscheme onedark
   set background=dark
   highlight Normal guibg=NONE
+  highlight Comment gui=italic
 ]]
