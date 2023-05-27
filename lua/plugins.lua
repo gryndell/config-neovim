@@ -119,6 +119,41 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  require 'nvim-treesitter.configs'.setup {
+      -- A list of parser names
+      ensure_installed = {
+          'bash', 'c', 'cpp', 'css', 'html', 'javascript', 'json', 'lua',
+          'python', 'markdown', 'markdown_inline', 'typescript', 'vim', 'yaml'
+      },
+
+      -- Install parsers synchronously (only applied to `ensure_installed`)
+      sync_install = false,
+
+      highlight = {
+          enable = true
+      },
+
+      rainbow = {
+          enable = true,
+          extended_mode = true,
+          max_file_lines = nil,
+          colors = {
+              "#ff0000",
+              "#ff5f00",
+              "#ffd700",
+              "#00ff00",
+              "#00ffff",
+              "#0000ff",
+              "#5f00ff",
+          }
+      },
+
+      indent = {
+          enable = true
+      },
+
+      additional_vim_regex_highlighting = false
+  }
   use "JoosepAlviste/nvim-ts-context-commentstring"
   ---}}} Treesitter
 
