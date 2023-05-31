@@ -85,6 +85,7 @@ return packer.startup(function(use)
   use "wuelnerdotexe/vim-enfocado"  -- enfocado colorscheme
   use "drewtempelmeyer/palenight.vim"   -- palenight
   use "ellisonleao/gruvbox.nvim"        -- gruvbox
+  use { "catppuccin/nvim", as = "catppuccin" }      -- catppuccin
   --}}} Colorschemes
 
   --{{{ Completion
