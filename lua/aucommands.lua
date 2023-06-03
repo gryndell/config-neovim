@@ -161,13 +161,13 @@ augroup view_group
   autocmd BufWinEnter init.vim silent! loadview
 augroup end
 
-augroup cursor_highlight
-  autocmd!
-  autocmd WinEnter * set cursorline
-  autocmd WinEnter * set cursorcolumn
-  autocmd WinLeave * set nocursorline
-  autocmd WinLeave * set nocursorcolumn
-augroup END
+" augroup cursor_highlight
+"   autocmd!
+"   autocmd WinEnter * set cursorline
+"   autocmd WinEnter * set cursorcolumn
+"   autocmd WinLeave * set nocursorline
+"   autocmd WinLeave * set nocursorcolumn
+" augroup END
 
 " Goyo.Limelight integration
 augroup Goyo
