@@ -15,7 +15,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   print "Installing packer close and reopen Neovim..."
   vim.cmd [[packadd packer.nvim]]
 end
----}}} Automatically install packer
+--}}} Automatically install packer
 
 --{{{ Reload neovim when plugins.lua file is saved
 vim.cmd [[
@@ -163,7 +163,12 @@ return packer.startup(function(use)
   --}}} Git
 
   --{{{ codeium AI completion
-  use "Exafunction/codeium.vim"
+    use {
+      "Exafunction/codeium.vim",
+      config = function()
+      vim.keymap.set('i', '<C-g>', function() return vim.fn['codeium#Accept']() end, { expr = true })
+      end
+    }
   --}}} codeium
 
   --{{{ Automatically start packer

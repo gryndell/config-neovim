@@ -30,10 +30,10 @@ augroup file_types
 
   " Text settings
   autocmd FileType tex,text,markdown,pandoc
-    \ setlocal textwidth=79 wrap shiftwidth=4 tabstop=4 expandtab
-  autocmd FileType gitcommit  setlocal spell textwidth=72
-  autocmd FileType fish,sh,zsh,ruby,vim,yaml,html,phtml,xhtml,xml,xsl,css
-    \ setlocal textwidth=0 wrap shiftwidth=2 tabstop=2 expandtab
+    \ setlocal tw=79 wrap sw=2 ts=2 et
+  autocmd FileType gitcommit  setlocal spell tw=72
+  autocmd FileType fish,sh,zsh,ruby,vim,yaml,html,phtml,xhtml,xml,xsl,css,lua
+    \ setlocal tw=0 wrap sw=2 ts=2 et
   autocmd FileType ruby       setlocal omnifunc=rubycomplete#Complete
   autocmd FileType calendar   :IndentLinesDisable
   autocmd FileType csv        :IndentLinesDisable
@@ -52,7 +52,7 @@ augroup file_types
     \ setlocal wrap linebreak formatoptions=tcqn
   autocmd FileType markdown,nroff,pandoc,tex,text   setlocal formatprg=par\ -w79
   autocmd FileType c,cpp,javascript,lua,rust,sh,vim setlocal cindent
-  autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
+  autocmd FileType javascript setlocal ts=2 sw=2
 
   " Fold Methods
   autocmd FileType markdown setlocal foldmethod=expr
@@ -83,15 +83,15 @@ augroup file_types
   autocmd BufRead,BufNewFile *.tsv setlocal ft=csv
   autocmd BufRead,BufNewFile *.h   setlocal ft=c
   autocmd BufRead,BufNewFile *.tsv
-    \ setlocal shiftwidth=20 tabstop=20 softtabstop=20 noexpandtab
+    \ setlocal sw=20 ts=20 sts=20 noet
   autocmd BufRead,BufNewFile *.ms,*.me,*.mom setlocal ft=nroff
   autocmd BufRead,BufNewFile *.c,*.py,*.js,*.java,*.vim,*rc
     \ run :IndentLinesEnable<cr>
   " autocmd BufWritePost       *.c,*.py,*.js,*.java silent! !ctags -R &
   autocmd BufRead,BufNewFile Makefile
-    \ setlocal shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
+    \ setlocal sw=4 ts=4 sts=4 noet
   autocmd BufRead,BufNewFile init.vim
-    \ setlocal textwidth=0 shiftwidth=2 tabstop=2 expandtab
+    \ setlocal tw=0 sw=2 ts=2 et
   autocmd BufRead,BufNewFile *.wiki run :nunmap <buffer> o<cr>
   autocmd FileType crontab setlocal backupcopy=yes
   " Check file in shellcheck

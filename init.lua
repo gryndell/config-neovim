@@ -65,7 +65,6 @@ vim.g.markdown_fenced_languages = {
     'html', 'python', 'lua', 'vim', 'typescript', 'javascript', 'css', 'bash',
     'sh', 'json', 'yaml', 'c', 'cpp', 'go', 'rust', 'pandoc', 'fish'
 }
-
 ---}}} Markdown
 
 --{{{ Table Mode
@@ -80,3 +79,12 @@ vim.cmd [[
 set whichwrap=b,s,h,l,<,>,[,]
 ]]
 --}}} Wrap conditions
+
+--{{{ Codeium
+vim.cmd [[
+    let g:codeium_filetypes = {
+        \ "markdown": v:true,
+        \ "pandoc": v:true,
+        \ }
+]]
+--}}} Codeium
