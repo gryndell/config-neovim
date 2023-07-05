@@ -68,6 +68,7 @@ keymap('i', '<f5>', '<c-r>=strftime("%F")<cr>', opts)
 -- Quotes, parentheses, brackets, and braces around
 keymap('n', '<leader>"', 'viw<esc>a"<esc>bi"<esc>lel', opts)
 keymap("n", "<leader>'", "viw<esc>a'<esc>bi'<esc>lel", opts)
+keymap("n", "<leader>`", "viw<esc>a`<esc>bi`<esc>lel", opts)
 keymap('n', '<leader>)', 'viw<esc>a)<esc>bi(<esc>lel', opts)
 keymap('n', '<leader>]', 'viw<esc>a]<esc>bi[<esc>lel', opts)
 keymap('n', '<leader>}', 'viw<esc>a}<esc>bi(<esc>lel', opts)
