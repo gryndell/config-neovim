@@ -4,8 +4,8 @@
 require('vars')    -- Variables
 require('opts')    -- Options
 require('keymaps') -- Keymaps
-require('plugins') -- Plugins
 require('colorscheme')  -- Colorscheme
+require('plugins') -- Plugins
 require('completion')   -- Completion
 require('functions')    -- Custom Vim Functions
 require('keymaps')      -- Key Mapping

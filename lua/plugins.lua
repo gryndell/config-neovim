@@ -131,7 +131,8 @@ return packer.startup(function(use)
       sync_install = false,
 
       highlight = {
-          enable = true
+          enable = true,
+          additional_vim_regex_highlighting = false
       },
 
       rainbow = {
@@ -152,8 +153,6 @@ return packer.startup(function(use)
       indent = {
           enable = true
       },
-
-      additional_vim_regex_highlighting = false
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
   ---}}} Treesitter
