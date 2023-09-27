@@ -4,7 +4,7 @@ require("catppuccin").setup({
         light = "latte",
         dark = "mocha",
     },
-    transparent_background = false, -- disables setting background color
+    transparent_background = true, -- disables setting background color
     show_end_of_buffer = false,     -- shows the '~' characters after the end
     term_colors = false,            -- sets terminal colors
     dim_inactive = {
@@ -29,7 +29,6 @@ require("catppuccin").setup({
         types = {},
         operators = {},
     },
-    color_overrides = {},
     custom_highlights = {},
     integrations = {
         cmp = true,
