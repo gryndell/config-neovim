@@ -106,3 +106,5 @@ keymap('n', '<leader>fg', ':Telescope live_grep<cr>', opts)
 keymap('n', '<leader>fb', ':Telescope buffers<cr>', opts)
 keymap('n', '<leader>fh', ':Telescope help_tags<cr>', opts)
 
+-- Get whole file into clipboard (main register)
+keymap('n', '<c-a>', "m'ggyG''<cr>", opts)
