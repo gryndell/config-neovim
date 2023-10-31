@@ -201,7 +201,7 @@ on {1} of {2} in frame {3} do:
 end. /** {5} of {6} in frame {7} **/
 ]],
     {
-        i(1, "f1, pf1, go 'enter'"),
+        i(1, "f1, pf1, go, 'enter'"),
         i(2, "fieldname"),
         i(3, "framename"),
         i(4, ""),
