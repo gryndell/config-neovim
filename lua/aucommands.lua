@@ -87,6 +87,7 @@ augroup file_types
   autocmd BufRead,BufNewFile *.ms,*.me,*.mom setlocal ft=nroff
   autocmd BufRead,BufNewFile *.c,*.py,*.js,*.java,*.vim,*rc
     \ run :IndentLinesEnable<cr>
+  autocmd BufRead,BufNewFile *.c setlocal sw=2 ts=2 sts=2
   " autocmd BufWritePost       *.c,*.py,*.js,*.java silent! !ctags -R &
   autocmd BufRead,BufNewFile Makefile
     \ setlocal sw=4 ts=4 sts=4 noet
