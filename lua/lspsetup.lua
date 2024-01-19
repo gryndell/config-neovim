@@ -61,6 +61,15 @@ require'lspconfig'.html.setup {
 require'lspconfig'.cssls.setup {
     capabilities = capabilities,
 }
+require'lspconfig'.lua_ls.setup {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+}
 
 vim.cmd [[ autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false }) ]]
 vim.cmd [[ highlight DiagnosticSignError guifg=red ]]
