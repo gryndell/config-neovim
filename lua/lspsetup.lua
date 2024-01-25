@@ -44,6 +44,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = {
+    'clangd',
     'gopls',
     'pylsp',
     'rust_analyzer',
