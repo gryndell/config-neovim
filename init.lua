@@ -35,8 +35,6 @@ vim.cmd [[
     let g:ale_fix_on_save = 0
     let g:ale_linters = {
             \ 'bash': ['shellcheck'],
-            \ 'c': ['cc'],
-            \ 'cpp': ['cc'],
             \ 'dart': ['dart'],
             \ 'go': ['golint'],
             \ 'javascript': ['eslint'],
