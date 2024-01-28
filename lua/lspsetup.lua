@@ -56,6 +56,10 @@ for _, lsp in pairs(servers) do
         on_attach = on_attach
     }
 end
+require'lspconfig'.clangd.setup {
+    capabilities = capabilities,
+    filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+}
 require'lspconfig'.html.setup {
     capabilities = capabilities,
 }
